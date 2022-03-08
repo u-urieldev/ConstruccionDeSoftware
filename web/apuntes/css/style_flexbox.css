@@ -1,0 +1,35 @@
+*{
+    border: 1px solid black;
+}
+
+div {
+    padding: 5%;
+    text-align: center;
+}
+
+/* El contenedor flexbox, sus hijos van a estar en modo fila*/
+.container{ 
+    display: flex;
+    margin: 7px;
+}
+
+.box{
+    margin: 1%;
+}
+
+#container1{
+    justify-content: space-between;
+}
+
+/* Dividir la caja en el numero de flex y se le asigna el valor de flex */
+#box4{
+    flex: 1;
+}
+
+#box5{
+    flex: 2;
+}
+
+#box6{
+    flex: 4;
+}

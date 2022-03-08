@@ -1,0 +1,109 @@
+*{
+    /* border: 1px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2, h3, p{
+    color: white;
+}
+
+/* Header */
+header{
+    background-color: rgb(30, 64, 76);
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+header h3{
+    margin-left: 9%;
+    flex: 4;
+}
+
+nav{
+    display: flex;
+    flex: 1.2;
+    align-items: center;
+    margin-right: 9%;
+}
+
+nav p{
+    margin-left: 8%;
+}
+/* Header */
+
+/* Article */
+article{
+    background-color: rgb(193, 125, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+}
+
+article p{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 3%;
+}
+/* Article */
+
+/* Form */
+#email_form{
+    background-color: rgb(30, 64, 76);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#suscribe_button{
+    background-color: rgb(193, 125, 0);
+    color: white;
+    margin-left: 0.3%;
+}
+
+#email_form h3{
+    margin-right: 5%;
+}
+/* Form */
+
+/* Logos */
+#languages{
+    display: flex;
+    margin-bottom: 1.1%;
+}
+
+.img_logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img{
+    margin-top: 5%;
+    width: 13%;
+    height: auto;
+}
+
+#languages p{
+    text-align: center;
+    color: gray;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+/* Logos */
+
+/* Footer */
+footer{
+    background-color: rgb(30, 64, 76);
+    display: flex;
+    justify-content: center;
+}
+/* Footer */
+
+
+
+

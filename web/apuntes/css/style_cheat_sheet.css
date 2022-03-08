@@ -1,0 +1,59 @@
+/* Selectores { descriptores } */
+
+*{ /* Todos los elementos*/
+    border: 1px solid black;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    background-color: bisque;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 20px;
+}
+
+h1, h2{
+    color: aqua;
+    text-align: center;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+p{
+    color: red;
+    border-radius: 10px;
+    /* margin: 10px 15px 20px 25px; /* Up Right Down Left (como reloj)*/ 
+    margin: 15px;
+    margin-bottom: 30px; /* Importante ponerlo abajo de el margen general */
+    padding: 30px;}
+
+span{
+    background-color: chartreuse;
+}
+
+div{
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+button, input{
+    color: purple;
+    background-color: yellow;
+    border-radius: 20px;
+}
+
+#botones_div{ /* Id */
+    background-color: brown;
+}
+
+.p_normal{ /* Clase */
+    background-color: azure;
+}
+
+ol{ /* Cambiamos el bullet de la lista */
+    list-style: disc;
+}
