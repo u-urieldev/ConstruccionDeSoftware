@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="../css/eventos_dom.css">
-    <script src="../js/eventos_dom.js"></script>
+    <link type="text/css" rel="stylesheet" href="eventos_dom.css">
+    <script src="js/eventos_dom.js"></script>
     <title>Document</title>
 </head>
 <body onload="main();">
@@ -15,9 +15,9 @@
         <p id="mousePosition">Posición del mouse: </p>
     </div>
 
-    <div class="container">
+    <div class="container" id="ex2">
         <p>2. Al dar click al siguiente botón, obtén el nombre y apellido de las siguientes cajas de texto, y agrega, después del botón, un elemento que tenga el nombre completo.</p>
-        <form id="form1" onsubmit="getFormvalue()">
+        <form id="form1" onsubmit="getFormvalue(event)">
             First name: <input type="text" name="fname" ><br>
             Last name: <input type="text" name="lname" ><br><br>
         <input type="submit" value="Submit">

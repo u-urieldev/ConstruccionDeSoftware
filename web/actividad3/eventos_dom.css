@@ -2,3 +2,15 @@
     padding: 10px;
     border-bottom: 1px solid black;
 }
+
+#form1{
+    margin-bottom: 2%;
+}
+
+#div_form{
+    border: 1px solid black;
+    margin-bottom: 1%;
+    margin-right: 50%;
+    display: flex;
+    justify-content: center;
+}
