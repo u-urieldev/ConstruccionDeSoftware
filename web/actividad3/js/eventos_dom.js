@@ -1,3 +1,6 @@
+let col_len = 2
+let row_len = 2 
+
 function mouseTrack(){
     let bd = document.querySelector("body")
     bd.addEventListener("mouseover", (event) => {
@@ -27,6 +30,25 @@ function getFormvalue(event){
     inputs.reset()
 }
 
+function insertRows(){
+    // obtenemos la referencia de la tabla  y creamos la nueva columna 
+    let table = document.querySelector("tbody")
+    let col = document.createElement("tr")
+    let row
+    let txt
+
+    for (let j = 1; j <= row_len; j++) {
+        row = document.createElement("td")
+        txt = document.createTextNode(`Row ${col_len+1} column ${j}`)
+        
+        row.appendChild(txt)
+        col.appendChild(row)
+    }         
+    col_len++
+    table.appendChild(col)
+}
+
 function main(){
     mouseTrack()
 }
+
