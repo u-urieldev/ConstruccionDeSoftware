@@ -73,6 +73,24 @@ function insertColumns(){
     }
 }
 
+function changeContent(){
+    //Leer las entradas
+    let inputs = document.querySelector("#formChangeContent")
+    let cell = inputs["cell"].value
+    let row = inputs["row"].value
+    let txt = inputs["txt"].value
+
+    // Crear el elemento a remplazar
+    let node = document.createTextNode(txt)
+
+    // Obtener la referencia a la tabla ([0] es la referencia al tbody)
+    let table = document.querySelector("#myTable").getElementsByTagName("tbody")[0]
+    
+    // Remplazamos el texto actual con el nuevo 
+    let pos = table.rows[row-1].cells[cell-1]
+    pos.replaceChild(node, pos.firstChild)
+}
+
 function main(){
     mouseTrack()
 }

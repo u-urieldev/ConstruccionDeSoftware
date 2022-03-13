@@ -58,8 +58,13 @@
                 <td>Row3 cell2</td>
                 <td>Row3 cell3</td>
             </tr>
-            </table><form><br>
-            <input type="button" onclick="changeContent()" value="Change content">
+        </table>
+            <form id="formChangeContent"> <br>
+                Row:    <input type="number", name="row">
+                Cell: <input type="number", name="cell">
+                Text:   <input type="text" name="txt"> <br> <br>
+                <input type="button" onclick="changeContent()" value="Change content">
+            </form>
     </div>
 
     <div class="container">
