@@ -1,6 +1,3 @@
-let col_len = 2
-let row_len = 2 
-
 function mouseTrack(){
     let bd = document.querySelector("body")
     bd.addEventListener("mouseover", (event) => {
@@ -31,41 +28,41 @@ function getFormvalue(event){
 }
 
 function insertRows(){
-    // incrementar el nuemero de filas en la tabla
-    row_len++
-
-    // obtenemos la referencia de la tabla  y creamos la nueva columna 
-    let table = document.querySelector("tbody")
+    // Obtenemos la referencia de la tabla  y creamos la nueva columna ([0] es la referencia al tbody)
+    let table = document.querySelector("#sampleTable").getElementsByTagName("tbody")[0]
     let col = document.createElement("tr")
-    let row
-    let txt
+    // let row
+    // let txt
+
+    // Obtenemos el tamaño actual de las columnas
+    let cell_len = table.rows[0].cells.length
 
     // Añadimos las filas de acuerdo al numero de columnas
-    for (let j = 1; j <= col_len; j++) {
-        row = document.createElement("td")
-        txt = document.createTextNode(`Row ${row_len} column ${j}`)
+    for (let i = 1; i <= cell_len; i++) {
+        let row = document.createElement("td")
+        let txt = document.createTextNode(`Row ${table.rows.length + 1} column ${i}`)
         
         row.appendChild(txt)
         col.appendChild(row)
     }         
     
-    // añadimos la columna ya con las filas
+    // Añadimos la columna ya con las filas
     table.appendChild(col)
 }
 
 function insertColumns(){
-    //Incrementar el numero de columnas
-    col_len++
+    // Obtenemos la referencia de la tabla ([0] es la referencia al tbody)
+    let table = document.querySelector("#sampleTable").getElementsByTagName("tbody")[0]
+    // let col
+    // let txt
 
-    // obtenemos la referencia de la tabla
-    let table = document.querySelector("tbody")
-    let col
-    let txt
+    // Obtenemos el tamaño actual de las celdas
+    let cell_len = table.rows[0].cells.length
 
     // Añadimos cada nueva fila para la nueva comuna creada
     for (let i = 0; i < table.rows.length; i++) {
-        col = document.createElement("td")
-        txt = document.createTextNode(`Row ${i+1} column ${col_len}`)
+        let col = document.createElement("td")
+        let txt = document.createTextNode(`Row ${i+1} column ${cell_len + 1}`)
 
         col.appendChild(txt)
 
@@ -83,7 +80,7 @@ function changeContent(){
     // Crear el elemento a remplazar
     let node = document.createTextNode(txt)
 
-    // Obtener la referencia a la tabla ([0] es la referencia al tbody)
+    // Obtener la referencia a la tabla 
     let table = document.querySelector("#myTable").getElementsByTagName("tbody")[0]
     
     // Remplazamos el texto actual con el nuevo 
