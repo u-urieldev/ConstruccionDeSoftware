@@ -31,21 +31,46 @@ function getFormvalue(event){
 }
 
 function insertRows(){
+    // incrementar el nuemero de filas en la tabla
+    row_len++
+
     // obtenemos la referencia de la tabla  y creamos la nueva columna 
     let table = document.querySelector("tbody")
     let col = document.createElement("tr")
     let row
     let txt
 
-    for (let j = 1; j <= row_len; j++) {
+    // Añadimos las filas de acuerdo al numero de columnas
+    for (let j = 1; j <= col_len; j++) {
         row = document.createElement("td")
-        txt = document.createTextNode(`Row ${col_len+1} column ${j}`)
+        txt = document.createTextNode(`Row ${row_len} column ${j}`)
         
         row.appendChild(txt)
         col.appendChild(row)
     }         
-    col_len++
+    
+    // añadimos la columna ya con las filas
     table.appendChild(col)
+}
+
+function insertColumns(){
+    //Incrementar el numero de columnas
+    col_len++
+
+    // obtenemos la referencia de la tabla
+    let table = document.querySelector("tbody")
+    let col
+    let txt
+
+    // Añadimos cada nueva fila para la nueva comuna creada
+    for (let i = 0; i < table.rows.length; i++) {
+        col = document.createElement("td")
+        txt = document.createTextNode(`Row ${i+1} column ${col_len}`)
+
+        col.appendChild(txt)
+
+        table.rows[i].appendChild(col)
+    }
 }
 
 function main(){
