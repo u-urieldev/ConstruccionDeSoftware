@@ -179,7 +179,7 @@ function createDivPre(fname, lname){
     // Creamos el div que contendra el elemento editar
     let div_edit = document.createElement("div")
     div_edit.setAttribute("class", "div_edit")
-    div_edit.appendChild(document.createTextNode("E"))
+    div_edit.appendChild(document.createTextNode("✎"))
     div_edit.addEventListener("click", editName)
 
     // Creamos el div que contendra el elemento eliminar
