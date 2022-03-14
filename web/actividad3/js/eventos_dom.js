@@ -149,6 +149,7 @@ const CSS_COLOR_NAMES = [
     "YellowGreen",
 ]
 
+//Ejercicio 1
 function mouseTrack(){
     let bd = document.querySelector("body")
     bd.addEventListener("mouseover", (event) => {
@@ -156,6 +157,7 @@ function mouseTrack(){
     })
 }
 
+// Ejercicio 2
 function getFormvalue(event){
     // Evitar que se recarge la pagina cuando se clicka submit
     event.preventDefault() 
@@ -178,6 +180,7 @@ function getFormvalue(event){
     inputs.reset()
 }
 
+// Ejercicio 3
 function insertRows(){
     // Obtenemos la referencia de la tabla  y creamos la nueva columna ([0] es la referencia al tbody)
     let table = document.querySelector("#sampleTable").getElementsByTagName("tbody")[0]
@@ -221,6 +224,7 @@ function insertColumns(){
     }
 }
 
+// Ejercicio 4
 function changeContent(){
     //Leer las entradas
     let inputs = document.querySelector("#formChangeContent")
@@ -239,6 +243,7 @@ function changeContent(){
     pos.replaceChild(node, pos.firstChild)
 }
 
+// Ejercicio 5
 function addColor(){
     
     // Obtenemos la referencia al select del form
@@ -270,8 +275,23 @@ function changeDivColor(){
     div.style.border = `2px solid ${list.value}`
 }
 
+//Ejercicio 6
+function changeImg(){
+    // Obtenemos la referencia de la imagen
+    let img = document.querySelector("#imgChange")
+
+    // Creamos la funcion que generara los numeros aleatorios
+    const randomNum = () => {return Math.floor(Math.random() * ((600 + 1) - 300) + 300)}
+
+    // Añadimos el evento
+    img.addEventListener("mouseover", () =>{
+        img.src = `http://placekitten.com/${randomNum()}/${randomNum()}`
+    })
+}
+
 function main(){
     mouseTrack()
     changeDivColor()
+    changeImg()
 }
 
