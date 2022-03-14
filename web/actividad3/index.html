@@ -68,17 +68,19 @@
     </div>
 
     <div class="container">
+        <div id="divColor">
         <p>5. Agrega el código para quitar o agregar elementos a la lista de opciones. Los colores pueden ser aleatorios.</p>
-        <form>
-            <select id="colorSelect">
+        <form id="colorsForm">
+            <select id="colorSelect" onchange="changeDivColor()" >
+            <option>Black</option>
             <option>Red</option>
             <option>Green</option>
             <option>White</option>
-            <option>Black</option>
             </select>
-            <input type="button" value="Add color">
-            <input type="button" value="Remove color">
+            <input type="button" value="Add color" onclick="addColor()">
+            <input type="button" value="Remove color" onclick="removeColor()">
         </form>
+        </div>
     </div>
 
     <div class="container">
