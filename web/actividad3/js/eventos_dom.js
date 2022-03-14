@@ -158,8 +158,16 @@ function mouseTrack(){
 }
 
 // Ejercicio 2
+function editName(event){
+    let new_name = prompt("Ingrese el nuevo nombre: ")
+
+    if (new_name != null) {
+        event.target.parentNode.firstChild.textContent = new_name
+    }
+}
+
 function createDivPre(fname, lname){
-    // Crear el bloque a insertar 
+    // Crear el bloque a insertar
     let div_ap = document.createElement("div")
     div_ap.setAttribute("class", "div_form")
 
@@ -168,15 +176,21 @@ function createDivPre(fname, lname){
     div_name.setAttribute("class", "div_name")
     div_name.appendChild(document.createTextNode(`${fname} ${lname}`))
 
+    // Creamos el div que contendra el elemento editar
+    let div_edit = document.createElement("div")
+    div_edit.setAttribute("class", "div_edit")
+    div_edit.appendChild(document.createTextNode("E"))
+    div_edit.addEventListener("click", editName)
+
     // Creamos el div que contendra el elemento eliminar
     let div_close = document.createElement("div")
     div_close.setAttribute("class", "div_close")
     div_close.appendChild(document.createTextNode("✖"))
-   
     div_close.addEventListener("click", (event) => {event.target.parentNode.remove()})
 
     //Anidamos los divs
     div_ap.appendChild(div_name)
+    div_ap.appendChild(div_edit)
     div_ap.appendChild(div_close)
 
     return div_ap

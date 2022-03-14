@@ -27,10 +27,21 @@
     justify-content: center;
 }
 
+.div_edit{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    border-left: 1px solid black;
+}
+
+.div_edit:hover{
+    color: blue;
+}
+
 .div_close{
     display: flex;
-    justify-content: center;
     flex: 1;
+    justify-content: center;
     border-left: 1px solid black;
 }
 
