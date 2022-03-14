@@ -158,6 +158,30 @@ function mouseTrack(){
 }
 
 // Ejercicio 2
+function createDivPre(fname, lname){
+    // Crear el bloque a insertar 
+    let div_ap = document.createElement("div")
+    div_ap.setAttribute("class", "div_form")
+
+    // Creamos el div que contendra el nombre
+    let div_name = document.createElement("div")
+    div_name.setAttribute("class", "div_name")
+    div_name.appendChild(document.createTextNode(`${fname} ${lname}`))
+
+    // Creamos el div que contendra el elemento eliminar
+    let div_close = document.createElement("div")
+    div_close.setAttribute("class", "div_close")
+    div_close.appendChild(document.createTextNode("✖"))
+   
+    div_close.addEventListener("click", (event) => {event.target.parentNode.remove()})
+
+    //Anidamos los divs
+    div_ap.appendChild(div_name)
+    div_ap.appendChild(div_close)
+
+    return div_ap
+}
+
 function getFormvalue(event){
     // Evitar que se recarge la pagina cuando se clicka submit
     event.preventDefault() 
@@ -166,15 +190,13 @@ function getFormvalue(event){
     let inputs = document.querySelector("#form1")
     let fname = inputs["fname"].value
     let lname = inputs["lname"].value
-    
-    // Crear el bloque a insertar 
-    let div_ap = document.createElement("div")
-    div_ap.setAttribute("id", "div_form")
-    div_ap.appendChild(document.createTextNode(`${fname} ${lname}`))
-    
+   
     // Insetar debajo del form
-    let cont = document.querySelector("#ex2")
-    cont.appendChild(div_ap)
+    //let cont = document.querySelector("#ex2")
+    let cont = document.querySelector("#names_list")
+
+    // Llamamos a la funcion para que agregue el elemento prediseñado
+    cont.appendChild(createDivPre(fname, lname))
 
     // Limpiar el form
     inputs.reset()
