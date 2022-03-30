@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-color: gray;
+}
+
+.grid-container{
+    /* height: 100vh; */
+    margin: 10px;
+    display: grid;
+    /* grid-template-columns: 1fr 2fr;  Unidades de grid (similar a flex */
+    grid-template-columns: repeat(3, 1fr);  
+    /* grid-template-rows: 300px; */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+    "side content nav"
+    "side content nav";
+    gap: 10px;
+    /* grid-auto-rows: minmax(150px, 1fr); definir tamaño generico por si se agrega un extra a la fila*/
+}
+
+.grid-item{
+    /* margin: 10px; */
+    padding: 10px;
+    border: 1px solid white;
+    background-color: orange;
+}
+
+.grid-item-1{
+    grid-area: header;
+}
+
+.grid-item-2{
+    /* grid-area: side; */
+    grid-row: 2 / 5; /* span 2 (con span especficas cuantas quieres que avance*/
+}
+

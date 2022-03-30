@@ -1,3 +1,5 @@
+import user from './constans.js'
+
 const CSS_COLOR_NAMES = [
     "AliceBlue",
     "AntiqueWhite",
@@ -215,7 +217,6 @@ function getFormvalue(event){
     // Limpiar el form
     inputs.reset()
 }
-
 // Ejercicio 3
 function insertRows(){
     // Obtenemos la referencia de la tabla  y creamos la nueva columna ([0] es la referencia al tbody)
