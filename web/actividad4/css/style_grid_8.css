@@ -1,0 +1,77 @@
+/* Generic -----------------*/
+:root{
+    --c-bkg:      rgb(32, 34, 51);
+    --c-orange:   rgb(231, 70, 68);
+    --c-orange-l: rgb(235, 107, 73);
+    --c-yellow:   rgb(239, 141, 78);
+    --c-green-d:  rgb(61, 154, 116);
+    --c-green-l:  rgb(72, 183, 145);
+    --c-aqua:     rgb(84, 214, 172);
+}
+
+body{
+    background-color: var(--c-bkg);
+}
+
+    /* Generic Container */
+.grid-item{
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: relative;
+    transition: top ease 0.3s;
+}
+
+.grid-item:hover{
+    top: -12px;
+}
+
+    /* Individual Colors */
+#g-item-1{
+    background-color: var(--c-orange);
+}
+
+#g-item-2{
+    background-color: var(--c-orange-l);
+}
+
+#g-item-3{
+    background-color: var(--c-yellow);
+}
+
+#g-item-4{
+    background-color: var(--c-green-d);
+}
+
+#g-item-5{
+    background-color: var(--c-green-l);
+}
+
+#g-item-6{
+    background-color: var(--c-aqua);
+}
+/* End Generic ----------------- */
+
+
+#grid-container{
+    /* Generic */
+    display: grid;
+    gap: 17px;  
+    background-color: var(--c-bkg);
+    height: 90vh;
+    padding: 2%;
+    /* Generic */
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.b3{
+    grid-column: 3 / 6;
+}
+
+.c1{
+    grid-column: 1 / 6;
+}
