@@ -43,6 +43,7 @@ body{
 
 #g-item-4{
     background-color: var(--c-green-d);
+    grid-area: nav;
 }
 
 #g-item-5{
@@ -51,6 +52,7 @@ body{
 
 #g-item-6{
     background-color: var(--c-aqua);
+    grid-area: article;
 }
 /* End Generic ----------------- */
 
@@ -63,4 +65,13 @@ body{
     height: 90vh;
     padding: 2%;
     /* Generic */
+
+    grid-template-areas: 
+    "header header header"
+    "nav article article"
+    "nav footer-l footer-r";
+}
+
+.header_div{
+    grid-area: header;
 }

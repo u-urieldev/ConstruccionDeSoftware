@@ -19,6 +19,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+
     top: 0;
     position: relative;
     transition: top ease 0.3s;
@@ -63,4 +64,32 @@ body{
     height: 90vh;
     padding: 2%;
     /* Generic */
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
 }
+
+.sub-grid{
+    display: grid;
+    gap: 17px; 
+    padding: 2%;
+    border-radius: 11px;
+    
+
+    grid-template-areas: 
+    "top_ top_"
+    "botom-l botom-r";
+}
+
+.top{
+    grid-area: top_;
+}
+
+.botom-l{
+    grid-area: botom-l;
+}
+
+.botom-r{
+    grid-area: botom-r;
+}
+

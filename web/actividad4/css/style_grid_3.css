@@ -29,28 +29,24 @@ body{
 }
 
     /* Individual Colors */
-#g-item-1{
-    background-color: var(--c-orange);
-}
-
-#g-item-2{
-    background-color: var(--c-orange-l);
-}
-
 #g-item-3{
     background-color: var(--c-yellow);
+    grid-area: header;
 }
 
 #g-item-4{
     background-color: var(--c-green-d);
+    grid-area: nav;
+}
+
+#g-item-1{
+    background-color: var(--c-orange);
+    grid-area: article;
 }
 
 #g-item-5{
     background-color: var(--c-green-l);
-}
-
-#g-item-6{
-    background-color: var(--c-aqua);
+    grid-area: footer;
 }
 /* End Generic ----------------- */
 
@@ -63,4 +59,11 @@ body{
     height: 90vh;
     padding: 2%;
     /* Generic */
+
+    grid-template-areas: 
+    "header header header header"
+    "nav article article article"
+    "nav article article article"
+    "footer footer footer footer"
+    ;
 }

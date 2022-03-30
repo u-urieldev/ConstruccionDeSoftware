@@ -63,4 +63,15 @@ body{
     height: 90vh;
     padding: 2%;
     /* Generic */
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.b3{
+    grid-column: 3 / 6;
+}
+
+.c1{
+    grid-column: 1 / 6;
 }
